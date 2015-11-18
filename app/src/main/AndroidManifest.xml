@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mvelduque.myapplication" >
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CrearPartido"
+            android:label="@string/title_activity_crear_partido" >
+        </activity>
+        <activity
+            android:name=".BuscarPartidoActivity"
+            android:label="@string/title_activity_buscar_partido" >
+        </activity>
+        <activity
+            android:name=".BuscaEquipoActivity"
+            android:label="@string/title_activity_busca_equipo"
+            android:parentActivityName=".CrearPartido" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mvelduque.myapplication.CrearPartido" />
+        </activity>
+        <activity
+            android:name=".ResultadoBuscarEquiposActivity"
+            android:label="@string/title_activity_resultado_buscar_equipos" >
+        </activity>
+        <activity
+            android:name=".ResultadoBuscarPartidosActivity"
+            android:label="@string/title_activity_resultado_buscar_partidos" >
+        </activity>
+        <activity
+            android:name=".LlevarPartido"
+            android:label="@string/title_activity_llevar_partido" >
+        </activity>
+    </application>
+
+</manifest>
